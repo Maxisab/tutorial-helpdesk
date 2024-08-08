@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState } from 'react'
 
 export default function AuthForm({ handleSubmit }) {
   const [email, setEmail] = useState('')
@@ -14,7 +14,7 @@ export default function AuthForm({ handleSubmit }) {
           type="email" 
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          required
+          required 
         />
       </label>
       <label>
@@ -23,7 +23,7 @@ export default function AuthForm({ handleSubmit }) {
           type="password" 
           onChange={(e) => setPassword(e.target.value)}
           value={password}
-          required
+          required 
         />
       </label>
       <button className="btn-primary">Submit</button>

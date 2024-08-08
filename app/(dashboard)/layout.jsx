@@ -7,11 +7,10 @@ import Navbar from '@/app/components/Navbar'
 export default async function DashboardLayout({ children }) {
   const supabase = createServerComponentClient({ cookies })
   const { data } = await supabase.auth.getSession()
-
+  console.log(data.session.user.email)
   return (
     <>
-    {/* user={data.session.user} */}
-      <Navbar  />
+      <Navbar user={data.session.user.email} />
       {children}
     </>
   )
